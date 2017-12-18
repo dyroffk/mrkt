@@ -34,7 +34,7 @@ module Mrkt
 
       @client_id = options.fetch(:client_id)
       @client_secret = options.fetch(:client_secret)
-      @partner_id = options.fetch(:partner_id, nil)
+      @partner_id = ENV['MARKETO_PARTNER_ID']
 
       @retry_authentication = options.fetch(:retry_authentication, false)
       @retry_authentication_count = options.fetch(:retry_authentication_count, 3).to_i
