@@ -34,6 +34,8 @@ module Mrkt
 
       @client_id = options.fetch(:client_id)
       @client_secret = options.fetch(:client_secret)
+      @token = options.fetch(:access_token, nil)
+      @valid_until = options.fetch(:expires_at, nil)
       @partner_id = options.fetch(:partner_id, nil)
 
       @retry_authentication = options.fetch(:retry_authentication, false)
